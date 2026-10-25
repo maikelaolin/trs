@@ -1,0 +1,27 @@
+type: mech
+health: 110
+speed: 0.42
+armor: 2
+hitSize: 8
+targetAir: false
+targetGround: true
+weapons: [
+  {
+    name: spear
+    x: 0
+    y: 0
+    shootY: 3
+    reload: 36
+    bullet: {
+      type: BasicBulletType
+      damage: 14
+      speed: 3
+      lifetime: 26
+      width: 7
+      height: 9
+      shootEffect: shootSmall
+      smokeEffect: shootSmallSmoke
+    }
+  }
+]
+requirements: [ gold/30 ]

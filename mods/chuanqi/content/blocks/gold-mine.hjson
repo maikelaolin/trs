@@ -1,0 +1,14 @@
+type: GenericCrafter
+health: 140
+size: 2
+update: true
+hasItems: true
+craftTime: 60
+outputItem: { item: gold, amount: 1 }
+requirements: [ copper/20 ]
+category: crafting
+research: core-shard
+researchCostMultiplier: 0.2
+buildCostMultiplier: 0.5
+idleSoundVolume: 0.4
+ambientSound: drill

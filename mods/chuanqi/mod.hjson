@@ -1,0 +1,8 @@
+name: "chuanqi"
+displayName: "传奇·战争"
+author: chuanqi-team
+description: "建造建筑获取金币，制造军队，完成对外的战争。"
+version: "0.1.0"
+minGameVersion: "160.7"
+dependencies: [ ]
+hidden: false

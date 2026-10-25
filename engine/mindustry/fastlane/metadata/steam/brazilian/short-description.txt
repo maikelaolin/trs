@@ -1,1 +1,0 @@
-Um jogo de construção e gerenciamento de fábricas com liberdade total, misturando estratégia em tempo real e defesa de torres.

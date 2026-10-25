@@ -13,11 +13,8 @@ GRADLE_HOME="$ROOT/.gradle-home"
 M2="$ROOT/.m2/repository"
 ENGINE="$ROOT/engine/mindustry"
 
-# 从环境读取当前代理端口（本机隧道端口每次会话可能变化）
-PORT="${https_proxy##*:}"
-PORT="${PORT%%/}"
-PORT="${PORT:-${HTTPS_PROXY##*:}}"
-PORT="${PORT%%/}"
+# 本机系统代理（Clash 类，稳定端口）。若切换代理请改这里或设环境变量 PROXY_PORT
+PORT="${PROXY_PORT:-7897}"
 
 if [ -n "$PORT" ]; then
   cat > "$GRADLE_HOME/gradle.properties" <<EOF

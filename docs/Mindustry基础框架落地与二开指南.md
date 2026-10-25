@@ -10,6 +10,27 @@
 
 ---
 
+## 0. 当前进度（2026-10-25 已落地）
+
+| 里程碑 | 状态 | 说明 |
+|---|---|---|
+| 工具链 | ✅ 完成 | JDK 17（Temurin）、Gradle 9.3.1 置于 `E:/codex/tools/`，不写入 C 盘 |
+| 引擎源码 | ✅ 完成 | Mindustry master 快照 + 本地 Arc，置于 `engine/`，已打国内镜像补丁 |
+| 首次构建 | ✅ 完成 | 桌面端 `Mindustry.jar`（88.5MB）、服务端 `server-release.jar`（19.3MB）均已产出并冒烟通过 |
+| 游戏 Mod 骨架 | ✅ 完成 | `mods/chuanqi/`：`mod.hjson` + 金币物品 + 金矿/军营建筑 + 步兵单位 + 中文 bundle |
+| 代码托管 | ✅ 完成 | 已推送至 `maikelaolin/trs` 的 **`dev` 分支**（main 分支保持空，未合入）；本地 `dev` 跟踪 `origin/dev` |
+
+**本机环境要点（与标准文档的差异）**：
+
+1. **构建统一用 `build.sh`**：本机通过代理上网，`build.sh` 已固化系统代理端口（Clash 类 `127.0.0.1:7897`），并在构建前自动写入 Gradle 代理配置；如需改端口，设环境变量 `PROXY_PORT` 或编辑 `build.sh`。桌面端/服务端构建命令改为：
+   ```bash
+   bash build.sh desktop:dist     # 产出 desktop/build/libs/Mindustry.jar
+   bash build.sh server:dist      # 产出 server/build/libs/server-release.jar
+   ```
+2. **Gradle/Maven 缓存落工作区**：`E:/codex/chuanqi/.gradle-home` 与 `E:/codex/chuanqi/.m2`，不占用 C 盘；`tools/`（JDK+Gradle）也在此工作区。
+
+---
+
 ## 目录
 
 1. 落地总览
